@@ -9,7 +9,7 @@ $filter_date = $_GET['date'] ?? date('Y-m-d');
 $search = trim($_GET['search'] ?? '');
 $purpose = $_GET['purpose'] ?? 'ALL';
 
-// build query
+// query
 $sql = "SELECT id, full_name, address, contact, school_office, purpose, visit_date, visit_time FROM visitors WHERE visit_date = ?";
 $params = [$filter_date];
 $types = 's';
